@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Inter SemiBold';
+  src: local('Inter SemiBold'),
+    url(./assets/fonts/Inter-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter Medium';
+  src: local('Inter Medium'),
+    url(./assets/fonts/Inter-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter Regular';
+  src: local('Inter Regular'),
+    url(./assets/fonts/Inter-Regular.ttf) format('truetype');
+}
+
+html, body {
+  height: 100%
+}
+
+body {
+  margin: 0px;
+  font-family: 'Inter Regular', sans-serif;
+  background-color: rgb(239, 239, 239);
+}
