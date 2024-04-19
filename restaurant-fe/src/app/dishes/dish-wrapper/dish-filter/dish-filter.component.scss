@@ -1,0 +1,32 @@
+@import '../../../../assets/theme/variables';
+.filter {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  &__item {
+    padding: 5px 20px;
+    border-radius: $largeBorderRadius;
+    cursor: pointer;
+    font-size: $b3;
+    &--unselected {
+      background-color: #ebe7e7;
+      color: #12131a;
+      font-weight: 600;
+    }
+    &--selected {
+      color: white;
+      background-color: #12131a;
+      font-weight: 600;
+    }
+  }
+}

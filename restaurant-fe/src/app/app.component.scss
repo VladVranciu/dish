@@ -1,10 +1,56 @@
+@import '../assets/theme/_variables';
+
 .main-page {
   &__container {
-    position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      filter: blur(10px);
+      top: -10px;
+      background-image: url('./../assets/images/background.png');
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1),
+        75%,
+        rgba(255, 255, 255, 1) 100%
+      );
+      z-index: -1;
+    }
   }
-  &__background {
-    position: absolute;
+
+  &__content {
+    margin-top: 51px;
+    height: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+    @media (min-width: $minWidth) {
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+    @media (min-width: $midWidth) {
+      margin-left: 162px;
+      margin-right: 162px;
+    }
   }
 }

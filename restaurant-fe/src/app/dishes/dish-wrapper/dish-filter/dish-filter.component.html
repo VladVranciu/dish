@@ -1,0 +1,17 @@
+<div class="filter__container">
+  <ul class="list">
+    @for(item of categories; track $index) {
+    <li
+      class="list__item"
+      [class]="{
+        'list__item--unselected': dishStore.filter().category !== item,
+        'list__item--selected': dishStore.filter().category === item
+      }"
+      (click)="selectFilter(item)"
+    >
+      {{ item }}
+    </li>
+    }
+  </ul>
+  <rst-search-input (onSearchChanged)="search($event)"/>
+</div>

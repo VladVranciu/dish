@@ -1,0 +1,10 @@
+<div class="search__container">
+  <input
+    type="text"
+    class="search__input"
+    [placeholder]="placeholder"
+    [(ngModel)]="search"
+    (ngModelChange)="searchChanged($event)"
+  />
+  <img class="search__icon" src="assets/images/search-lg.svg" />
+</div>

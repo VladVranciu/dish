@@ -1,0 +1,26 @@
+@import '../../../assets/theme/variables';
+
+.search {
+  &__container {
+    position: relative;
+  }
+  &__input {
+    width: 225px;
+    height: 30px;
+    background-color: #f7f7f7;
+    border-radius: $largeBorderRadius;
+    border: none;
+    padding-left: 34px;
+    outline: none;
+    &::placeholder {
+      color: #404b5a;
+      font-size: $b3;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 12px;
+    top: 7px;
+  }
+}
