@@ -1,0 +1,12 @@
+@import '../../../../assets/theme/variables';
+
+.container {
+  display: grid;
+  overflow-y: auto;
+  max-height: calc(100vh - 400px);
+  gap: 18px;
+  grid-template-columns: 1fr;
+  @media (min-width: 1300px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}

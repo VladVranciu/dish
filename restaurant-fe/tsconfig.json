@@ -32,6 +32,7 @@
       "@store/*": ["src/shared/store/*"],
       "@helpers/*": ["src/shared/helpers/*"],
       "@interceptors/*": ["src/interceptors/*"],
+      "@mixins/*": ["src/shared/mixins/*"],
     }
   },
   "angularCompilerOptions": {

@@ -1,0 +1,42 @@
+.container {
+  width: 400px;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0px 100px 80px 0px #87878712;
+  padding: 24px;
+  border: 1px solid #ebe7e7;
+  overflow-y: auto;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  &__payment {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

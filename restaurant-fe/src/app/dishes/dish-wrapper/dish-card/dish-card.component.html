@@ -1,0 +1,30 @@
+<div class="card__container">
+  <img class="card__image" [src]="dish?.image" />
+  @if(quantity) {
+  <div class="card__quantity">
+    {{ quantity }}
+  </div>
+  }
+  <div class="card">
+    <div class="card__content">
+      <div class="card__header">
+        <span class="card__header__title">{{ dish?.name }}</span>
+        <img src="assets/images/info.svg" />
+      </div>
+      <div class="line-clamp-2">
+        {{ dish?.description }}
+      </div>
+    </div>
+    <div class="card__footer">
+      @if(!quantity) {
+      <rst-add-to-cart-button text="Add to cart" (click)="updateCart()" />
+      } @else {
+      <rst-increment-button
+        [quantity]="quantity"
+        (onClick)="updateCart($event)"
+      />
+      }
+      <span class="card__footer__price"> € {{ dish?.price }} </span>
+    </div>
+  </div>
+</div>

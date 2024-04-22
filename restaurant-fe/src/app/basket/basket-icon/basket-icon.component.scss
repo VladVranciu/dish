@@ -1,0 +1,29 @@
+@import '../../../assets/theme/variables';
+
+.container {
+  background-color: $orange;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.icon {
+  position: absolute;
+  top: 40px;
+  left: 25px;
+}
+
+.quantity {
+  background-color: #FFFFFF;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50px;
+  right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

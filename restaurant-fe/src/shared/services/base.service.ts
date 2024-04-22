@@ -14,6 +14,18 @@ export abstract class BaseService<T> implements CrudOperationsInterface<T> {
     return this.serviceAgent.getModel(id)
   }
 
+  saveModel(model: T): Observable<T> {
+    return this.serviceAgent.saveModel(model)
+  }
+
+  updateModel(id: string, model: T): Observable<T> {
+    return this.serviceAgent.updateModel(id, model)
+  }
+
+  deleteModel(id: string): Observable<T> {
+    return this.serviceAgent.deleteModel(id)
+  }
+
   protected computeFilters(storeFilters?: Filter) {
     return storeFilters
   }

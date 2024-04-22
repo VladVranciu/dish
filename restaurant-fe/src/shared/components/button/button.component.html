@@ -1,0 +1,9 @@
+<button
+  [class]="{
+    button: true,
+    primary: isPrimary,
+  }"
+  (click)="onClick.emit()"
+>
+  {{ text }}
+</button>

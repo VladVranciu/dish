@@ -1,0 +1,11 @@
+@if(dishStore.isLoading()) {
+<rst-loader />
+} @else if (!dishStore.dishes().length) {
+<rst-empty-state />
+} @else {
+<div class="container">
+  @for(item of dishStore.dishes(); track $index) {
+  <rst-dish-card [dish]="item" />
+  }
+</div>
+}

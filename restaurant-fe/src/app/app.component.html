@@ -1,6 +1,15 @@
+@if(basketStore.allQuantity()){ @if(!showPanel){
+<div class="main-page__basket__icon" (click)="fillShowPanel(true)">
+  <rst-basket-icon [quantity]="basketStore.allQuantity()" />
+</div>
+} @else {
+<div class="main-page__basket">
+  <rst-basket-right-panel (onClose)="fillShowPanel(false)"/>
+</div>
+} }
 <div class="main-page__container">
   <div class="main-page__content">
     <router-outlet />
   </div>
 </div>
-<p-toast/>
+<p-toast />

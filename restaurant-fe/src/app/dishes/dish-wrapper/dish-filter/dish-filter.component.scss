@@ -2,8 +2,15 @@
 .filter {
   &__container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    @media (min-width: $minWidth) {
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+    }
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+    padding-bottom: 10px;
   }
 }
 
@@ -21,12 +28,10 @@
     &--unselected {
       background-color: #ebe7e7;
       color: #12131a;
-      font-weight: 600;
     }
     &--selected {
       color: white;
       background-color: #12131a;
-      font-weight: 600;
     }
   }
 }

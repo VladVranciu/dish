@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="title">
+    <h2>Your order</h2>
+    <img class="close" src="assets/images/close.svg" (click)="onClose.emit()" />
+  </div>
+  <div class="content">
+    @for(item of basketStore.basket()?.items; track item.quantity) {
+    <rst-basket-card [basketItem]="item" />
+    }
+  </div>
+  <div class="footer">
+    <div class="footer__payment">
+      <rst-checkout-info label="Subtotal" [price]="basketStore.subtotal()" />
+      <rst-checkout-info label="Delivery fee" [price]="DELIVERY_FEE" />
+      <rst-checkout-info label="Total" [price]="total()" />
+    </div>
+    <div class="footer__actions">
+      <rst-button [text]="orderText()" />
+      <rst-button
+        text="Continue Shopping"
+        [isPrimary]="false"
+        (onClick)="onClose.emit()"
+      />
+    </div>
+  </div>
+</div>

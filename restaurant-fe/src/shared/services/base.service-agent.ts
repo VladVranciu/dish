@@ -7,9 +7,9 @@ import { Observable } from 'rxjs'
 export abstract class BaseServiceAgent<T>
   implements CrudOperationsInterface<T>
 {
-  private readonly httpClient = inject(HttpClient)
+  protected readonly httpClient = inject(HttpClient)
 
-  constructor(private resource: string) {}
+  constructor(protected resource: string) {}
 
   getList(filter?: Filter): Observable<T[]> {
     return this.httpClient.get<T[]>(this.resource, {
@@ -19,5 +19,17 @@ export abstract class BaseServiceAgent<T>
 
   getModel(id: number): Observable<T> {
     return this.httpClient.get<T>(`${this.resource}/${id}`)
+  }
+
+  saveModel(model: T) {
+    return this.httpClient.post<T>(this.resource, model)
+  }
+
+  updateModel(id: string, model: T) {
+    return this.httpClient.put<T>(`${this.resource}/${id}`, model)
+  }
+
+  deleteModel(id: string) {
+    return this.httpClient.delete<T>(`${this.resource}/${id}`)
   }
 }

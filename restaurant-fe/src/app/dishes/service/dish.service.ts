@@ -15,10 +15,10 @@ export class DishService extends BaseService<Dish> {
   protected override computeFilters(storeFilters?: any) {
     let filters: Filter = {}
     if (storeFilters?.search) {
-      filters['search'] = storeFilters.search
+      filters['name'] = storeFilters.search
     }
     if (storeFilters?.category === DISH_CATEGORIES[0]) {
-      filters['popular'] = true
+      filters['popular'] = 1
       return filters
     }
     filters['category'] = storeFilters?.category

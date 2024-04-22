@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.button {
+  padding: 8px 12px 8px 12px;
+  background-color: #ebe7e7;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.quantity {
+  font-size: 16px;
+  font-weight: 600px;
+}

@@ -1,0 +1,11 @@
+<div class="container">
+  <h4>{{ basketItem?.dish?.name }}</h4>
+  <span>Price per item: € {{ basketItem?.dish?.price }}</span>
+  <div class="footer">
+    <p class="footer__total">Total: € {{ total() }}</p>
+    <rst-increment-button
+      [quantity]="basketItem?.quantity!"
+      (onClick)="updateCart($event)"
+    />
+  </div>
+</div>

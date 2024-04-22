@@ -1,0 +1,70 @@
+@import '../../../../assets/theme/variables';
+
+.card {
+  &__container {
+    width: 100%;
+    height: 200px;
+    box-shadow: 0px 12.52px 10.02px 0px #9d9d9d09;
+    border: 1px solid #ebe7e7;
+    border-radius: $midBorderRadius;
+    display: flex;
+    position: relative;
+    &:hover {
+      background-color: #f7f7f7;
+      cursor: pointer;
+    }
+  }
+
+  &__quantity {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    background-color: $orange;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    object-fit: cover;
+    padding: 5px;
+    border-radius: $midBorderRadius;
+  }
+
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__title {
+      font-size: $b3;
+      font-weight: 600;
+      padding-top: 10px;
+    }
+  }
+  &__footer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    &__price {
+      font-size: $b3;
+      font-weight: 600;
+    }
+  }
+}

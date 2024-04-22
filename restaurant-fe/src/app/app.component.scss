@@ -33,7 +33,7 @@
         rgba(255, 255, 255, 0) 0%,
         rgba(255, 255, 255, 1),
         75%,
-        rgba(255, 255, 255, 1) 100%
+        #f7f7f7 100%
       );
       z-index: -1;
     }
@@ -44,6 +44,7 @@
     height: 100%;
     margin-left: 15px;
     margin-right: 15px;
+    max-width: 1400px;
     @media (min-width: $minWidth) {
       margin-left: 100px;
       margin-right: 100px;
@@ -51,6 +52,23 @@
     @media (min-width: $midWidth) {
       margin-left: 162px;
       margin-right: 162px;
+    }
+    @media (min-width: $largeWidth) {
+      margin-left: calc((100vw - 1200px) / 2);
+      margin-right: calc((100vw - 1200px) / 2);
+    }
+  }
+
+  &__basket {
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    z-index: 99;
+    &__icon {
+      z-index: 99;
+      bottom: 100px;
+      right: 100px;
+      position: absolute;
     }
   }
 }

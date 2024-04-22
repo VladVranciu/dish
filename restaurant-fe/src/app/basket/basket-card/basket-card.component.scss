@@ -1,0 +1,19 @@
+@import '../../../assets/theme/variables';
+.container {
+  height: 136px;
+  width: 100%;
+  background-color: #f7f7f7;
+  padding: 0px 10px;
+  border: 1px solid #ebe7e7;
+  border-radius: 12px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__total {
+    color: $orange;
+    font-weight: 600;
+  }
+}

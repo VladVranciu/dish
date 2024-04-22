@@ -1,6 +1,9 @@
+@import '../../../assets/theme/variables';
+
 .wrapper {
   width: 100%;
   height: 100%;
   background-color: white;
-  border-radius: 12px;
+  border-radius: $midBorderRadius;
+  box-shadow: 100px 100px 80px 100px #87878712;
 }

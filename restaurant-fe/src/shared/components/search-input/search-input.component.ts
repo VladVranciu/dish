@@ -6,8 +6,6 @@ import {
   Output
 } from '@angular/core'
 import { FormsModule } from '@angular/forms'
-import { INPUT_DEBOUNCE } from '@constants/constants'
-import { debounceTime, throttle } from 'rxjs'
 
 @Component({
   selector: 'rst-search-input',
