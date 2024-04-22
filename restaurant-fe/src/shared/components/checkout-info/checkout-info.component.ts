@@ -16,6 +16,4 @@ import {
 export class CheckoutInfoComponent {
   @Input() label: string | undefined
   @Input() price: number | undefined
-
-  formattedPrice = computed(() => this.price?.toFixed(2))
 }

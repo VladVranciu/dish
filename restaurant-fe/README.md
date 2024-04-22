@@ -1,3 +1,7 @@
+# INFO
+
+Run `npm run start:fe` and `npm run start:be` to start th app. There is no authentication feature therefore the basket is simulated to run by id.
+NOTE: The dish search won't properly work because json-server does not support %like% query. It will work only with exact values
 # RestaurantFe
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.

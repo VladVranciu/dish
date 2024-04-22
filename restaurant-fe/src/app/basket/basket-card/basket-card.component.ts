@@ -22,11 +22,13 @@ export class BasketCardComponent {
   readonly basketStore = inject(BasketSignalStore)
 
   total = computed(() => {
-    /** getting data from store due to track by quantity not working */
+    /** getting data from store because track by quantity in for is not working */
     const item = this.basketStore
       .basket()
       ?.items.find((dish) => dish.dish.id === this.basketItem?.dish.id)
-    if (item) return item?.dish.price * item?.quantity
+    if (item) {
+      return item?.dish.price * item?.quantity
+    }
     return '-'
   })
   updateCart(quantity = 1) {
